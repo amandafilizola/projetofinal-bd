@@ -1,0 +1,16 @@
+CREATE DATABASE cadastrogrande;
+
+CREATE TABLE cadastro
+(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	login VARCHAR(20) NOT NULL,
+	senha VARCHAR(20) NOT NULL,
+	nome VARCHAR(30) NOT NULL,
+	email VARCHAR(50) NOT NULL, 
+	cpf CHAR(11) NOT NULL,
+	rg CHAR(7) NOT NULL,
+	idade INT(3) NOT NULL,
+	nomedopai VARCHAR(30) NOT NULL,
+	nomedamae VARCHAR(30) NOT NULL,
+	datanasc CHAR(8) NOT NULL
+);
