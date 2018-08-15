@@ -1,42 +1,3 @@
-<?php 
-
-include 'connection.php';
-
-$modo = "";
-if(isset($_POST['modo']))
-{
-	$modo = $_POST['modo'];
-}
-
-$login = $senha = "";
-if(isset($_POST['login'])&&isset($_POST['senha']))
-{
-	$login = $_POST['login'];
-	$senha = $_POST['senha'];
-}
-
-if($modo == 'inserir')
-{
-	$sql = "SELECT * FROM cadastro WHERE login = '".$login."' AND senha = '".$senha."';";
-	$row= $conn->query($sql);
-	$row->fetch_assoc(); 
-	
-	if($row->num_rows>0)
-	{
-		echo "<script> alert('login correto');
-		window.location = 'perfil.php';</script>
-		";
-
-	}
-	else
-	{
-		echo "<script> alert('login incorreto');
-		window.location = 'login.php';</script>";
-	
-	}
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,14 +7,13 @@ if($modo == 'inserir')
 	<div class="caixadecadastro">
 		<img src="logo.png" width="45%">
 		<br>
-		<form method="post" action="login.php">
+		<form method="post" action="logar.php">
 			<label>Login </label>
 			<input type="text" name="login" id="login" placeholder="Digite seu nome" required>
 			<br>
 			<label>Senha </label>
 			<input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
 			<br>
-			<input type="hidden" name="modo" id="modo" value="inserir">
 			<br>
 			<button>Logar</button>
 		</form>
