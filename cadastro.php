@@ -8,7 +8,7 @@
 	<div class="caixadecadastro">
 		<img src="logo.png" width="25%">
 		<br>
-		<form method="get" action="cadastrar.php">
+		<form method="post" action="cadastrar.php">
 			<label>Login</label>
 			<input type="text" name="login" id="login" placeholder="Digite seu usuário" required>
 			<br><br>

@@ -30,6 +30,10 @@ if(!isset($_SESSION['userlala']))
 				<td><?php echo $row['login'];?></td>
 			</tr>
 			<tr>
+				<td class="classeinfo">Senha</td>
+				<td><?php echo $row['senha'];?></td>
+			</tr>
+			<tr>
 				<td class="classeinfo">Nome Completo</td>
 				<td><?php echo $row['nome'];?></td>
 			</tr>
@@ -72,15 +76,18 @@ if(!isset($_SESSION['userlala']))
 			</tr>
 			<tr>
 				<td colspan="2" id="r"><a href="atualizar.php" id="r">Gostaria de editar seus dados?</a></th>
+				
 			</tr>
-			</table>
-		
+			<tr>
+				<td colspan="2" id="r"><a href="logout.php" id="r">Logout</a></td>
+			</tr>
+		</table>
 	</div>
 	<style type="text/css">
 		#r
 		{
 			border:0px;
-			padding-top: 30px;
+			padding-top: 20px;
 			padding-bottom: 30px;
 			text-decoration: none;
 			color: black;

@@ -18,7 +18,9 @@
 			<button>Logar</button>
 		</form>
 		<label>Ainda não tem cadastro? Se inscreva!</label><br>
-		<button><a href="cadastro.php"style="text-decoration: none;color:black;">Cadastro</a></button>
+		<button><a href="cadastro.php"style="text-decoration: none;color:black;">Cadastro</a></button><br>
+		<label>Esqueceu sua senha?</label><br>
+		<button><a href="atualizarsenha.php"style="text-decoration: none;color:black;">Esqueci minha senha!</a></button>
 	</div>
 	<style type="text/css">
 		.caixadecadastro

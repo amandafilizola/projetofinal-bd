@@ -2,19 +2,19 @@
 
 require_once('connection.php');
 
-	$login = $_GET['login'];
-	$senha = $_GET['senha'];
-	$nome = $_GET['nome'];
-	$cpf = $_GET['cpf'];
-	$email = $_GET['email'];
-	$rg = $_GET['rg'];
+	$login = $_POST['login'];
+	$senha = $_POST['senha'];
+	$nome = $_POST['nome'];
+	$cpf = $_POST['cpf'];
+	$email = $_POST['email'];
+	$rg = $_POST['rg'];
 	$idade = "";
-	$nomedopai = $_GET['nomedopai'];
-	$nomedamae = $_GET['nomedamae'];
-	$datanasc = $_GET['datanasc'];
+	$nomedopai = $_POST['nomedopai'];
+	$nomedamae = $_POST['nomedamae'];
+	$datanasc = $_POST['datanasc'];
 
 
-	$sql = "SELECT * FROM cadastro WHERE cpf = '".$cpf."' or rg = '".$rg."' or login = '".$login."' or email = '".$email."' LIMIT 1;";
+	$sql = "SELECT * FROM cadastro WHERE cpf = '".$cpf."' OR rg = '".$rg."' OR login = '".$login."' OR email = '".$email."' LIMIT 1;";
  	$check = $conn->query($sql);
  	$check->fetch_assoc();
  	if($check->num_rows>0)
