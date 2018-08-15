@@ -24,41 +24,41 @@ if(!isset($_SESSION['userlala']))
 	$row=$result->fetch_assoc();
 	?>
 	<div class="tabeladousuario">
-		<table border="1">
+		<table border="1" class="caixadecadastro">
 			<tr>
-				<td>Usuário</td>
+				<td class="classeinfo">Usuário</td>
 				<td><?php echo $row['login'];?></td>
 			</tr>
 			<tr>
-				<td>Nome Completo</td>
+				<td class="classeinfo">Nome Completo</td>
 				<td><?php echo $row['nome'];?></td>
 			</tr>
 			<tr>
-				<td>CPF</td>
+				<td class="classeinfo">CPF</td>
 				<td><?php echo $row['cpf'];?></td>
 			</tr>
 			<tr>
-				<td>RG</td>
+				<td class="classeinfo">RG</td>
 				<td><?php echo $row['rg'];?></td>
 			</tr>
 			<tr>
-				<td>Email</td>
+				<td class="classeinfo">Email</td>
 				<td><?php echo $row['email'];?></td>
 			</tr>
 			<tr>
-				<td>Nome do Pai</td>
+				<td class="classeinfo">Nome do Pai</td>
 				<td><?php echo $row['nomedopai'];?></td>
 			</tr>
 			<tr>
-				<td>Nome da Mãe</td>
+				<td class="classeinfo">Nome da Mãe</td>
 				<td><?php echo $row['nomedamae'];?></td>
 			</tr>
 				<tr>
-				<td>Idade</td>
+				<td class="classeinfo">Idade</td>
 				<td><?php echo $row['idade'];?></td>
 			</tr>
 			<tr>
-				<td>Data de nascimento</td>
+				<td class="classeinfo">Data de nascimento</td>
 				<td>
 				<?php
 				$data=$row['datanasc'];
@@ -68,14 +68,87 @@ if(!isset($_SESSION['userlala']))
 				$dia=substr($data,6,2);
 				echo "$dia/$mes/$ano";
 				?>
-					
 				</td>
 			</tr>
-		</table>
+			<tr>
+				<td colspan="2" id="r"><a href="atualizar.php" id="r">Gostaria de editar seus dados?</a></th>
+			</tr>
+			</table>
 		
 	</div>
 	<style type="text/css">
-		
+		#r
+		{
+			border:0px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			text-decoration: none;
+			color: black;
+		}
+		#r:hover
+		{
+			font-size: 1.05em;
+		}
+		.caixadecadastro
+		{
+			margin-left: 25%;
+			margin-top: 3%;
+			margin-bottom:5%;
+			text-align: center;
+			width: 50%;
+			background-color: rgba(255,255,255,0.8);
+			font-family: "Candara";
+			font-size: 1.4em;
+			border: 2px solid grey;
+			padding: 1%;
+		}
+		.classeinfo
+		{
+			width: 30%;
+		}
+		body
+		{
+			margin: 0px;
+			padding: 0px;
+			background-image: url("nightstars.jpg");
+			background-position: center;
+		}
+		@media only screen and (min-width: 901px) and (max-width:1024px)
+		{
+			.caixadecadastro
+			{
+				width: 35%;
+				margin-left: 30%;
+				font-size: 0.9em;
+			}
+		}
+		@media only screen and (min-width: 768px) and (max-width:900px)
+		{
+			.caixadecadastro
+			{
+				width: 45%;
+				margin-left: 30%;
+				font-size: 0.9em;
+			}
+		}
+		@media only screen and (min-width: 480px) and (max-width: 767px)
+		{
+			.caixadecadastro
+			{
+				width: 60%;
+				margin-left: 20%;
+				font-size: 0.9em;
+			}
+		}
+		@media only screen and (max-width: 479px)
+		{
+			.caixadecadastro
+			{
+				width: 60%;
+				margin-left: 15%;
+				font-size: 0.9em;
+			}
+		}
 	</style>
 </body>
 </html>
